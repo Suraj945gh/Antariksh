@@ -1,0 +1,16 @@
+<launch>
+  <!-- Start Gazebo -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+
+  <!-- Start radius_publisher -->
+  <node name="radius_publisher" pkg="ros_assignment" type="radius_publisher.py" output="screen" />
+
+  <!-- Start compute_ang_vel_server -->
+  <node name="compute_ang_vel_server" pkg="ros_assignment" type="compute_ang_vel_server.py" output="screen" />
+
+  <!-- Start turtlebot_controller -->
+  <node name="turtlebot_controller" pkg="ros_assignment" type="turtlebot_controller.py" output="screen" />
+
+  <!-- Start eight_publisher -->
+  <node name="eight_publisher" pkg="ros_assignment" type="eight_publisher.py" output="screen" />
+</launch>
